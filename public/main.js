@@ -32,10 +32,17 @@ const displayGames = (games) => {
   games.forEach((game) => {
     const gameCard = document.createElement("div");
     gameCard.className = "game-card animate-fade-in";
-    gameCard.innerHTML = `
-      <h3 class="font-semibold text-lg mb-2">${game.name}</h3>
-      <p class="text-sm text-gray-400">App ID: ${game.appid}</p>
-    `;
+
+    const title = document.createElement("h3");
+    title.className = "font-semibold text-lg mb-2";
+    title.textContent = game.name;
+
+    const appId = document.createElement("p");
+    appId.className = "text-sm text-gray-400";
+    appId.textContent = `App ID: ${game.appid}`;
+
+    gameCard.appendChild(title);
+    gameCard.appendChild(appId);
     gamesGrid.appendChild(gameCard);
   });
 };
