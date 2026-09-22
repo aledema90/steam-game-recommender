@@ -8,9 +8,9 @@
     "vercel-build": "echo 'Build step completed'"
   },
   "dependencies": {
-    "express": "^4.18.1",
+    "express": "^4.22.3",
     "helmet": "^8.2.0",
     "node-fetch": "^3.0.0",
-    "qs": "^6.14.1"
+    "qs": "^6.16.0"
   }
 }
